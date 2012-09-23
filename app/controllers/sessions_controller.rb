@@ -12,8 +12,7 @@ class SessionsController < ApplicationController
 			render 'new'
 		else
 			# 어드민이면 관리페이지, 업체면 자기 페이지
-			#sign_in user
-			#redirect_to user
+			sign_in user
 			render :text => 'successfully logged in'
 		end
 	end
