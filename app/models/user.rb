@@ -34,6 +34,10 @@ class User < ActiveRecord::Base
     self.admin
   end
 
+  def password
+  	
+  end
+
   def has_password?(submitted_password)
     Password.new(self.encrypted_password) ==  submitted_password
   end
@@ -46,6 +50,8 @@ class User < ActiveRecord::Base
 
 private
   def encrypt_password
+  	#이건 현재 있는 패스워드를 받아서 해시 값을 만든후에 저장한다.
+  	#지금 같은 경우에는 패스워드가 있었나? User.password 가 이미 있는 상황이지. 어떻하지? 이게 지금이랑 같다는걸 어떻게 알지?
     self.encrypted_password = Password.create(password)
   end
 
