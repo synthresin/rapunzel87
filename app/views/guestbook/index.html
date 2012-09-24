@@ -2,7 +2,7 @@
 <!-- 로그인 안했을때-->
 <% if signed_in? %>
 <div class="field">
-	<%= current_user.email %>
+	<%= current_user.name %>
 </div>
 <% else %>
 <div class="field">
@@ -26,7 +26,7 @@
 		<% if p.user_id.nil? %>
 		<td><%= p.name %></td>	
 		<% else %>
-		<td><%= User.find(p.user_id).email %></td>	
+		<td><%= User.find(p.user_id).name %></td>	
 		<% end %>
 		<td><%= p.content %></td>
 		<td>

@@ -3,7 +3,7 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
   attr_accessor :password, :password_confirmation
-  attr_accessible :email, :password, :password_confirmation
+  attr_accessible :email, :password, :password_confirmation, :name, :nickname
 
   has_many :microposts
 
