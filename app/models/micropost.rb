@@ -1,3 +1,4 @@
 class Micropost < ActiveRecord::Base
-  # attr_accessible :title, :body
+	#attr_accessor	:name, :content, :user_id
+    attr_accessible :name, :content
 end
