@@ -7,7 +7,7 @@ class GuestbookController < ApplicationController
 			@micropost = Micropost.new
 		end
 
-		@microposts = Microposts.all
-		
+		@microposts = Micropost.all
+
 	end
 end

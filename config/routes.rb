@@ -1,11 +1,13 @@
 Rapunzel87::Application.routes.draw do
 
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :microposts, :only => [:create, :destroy]
 
   match '/login' => 'sessions#new'
   match '/logout' => 'sessions#destroy'
 
   match '/guestbook' => 'guestbook#index'
+
 
   root :to => 'welcome#index'
 

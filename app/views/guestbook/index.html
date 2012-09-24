@@ -1,2 +1,20 @@
-<% form_for @micropost do |f| %>
+<%= form_for @micropost do |f| %>
+<!-- 로그인 안했을때-->
+<% if signed_in? %>
+<div class="field">
+	<%= current_user.email %>
+</div>
+<% else %>
+<div class="field">
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+</div>
+<% end %>
+<div class="field">
+	<%= f.label :content %>
+	<%= f.text_field :content %>
+</div>
+<div class="actions">
+	<%= f.submit "Sign in" %>
+</div>
 <% end %>
