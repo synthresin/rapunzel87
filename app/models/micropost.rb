@@ -3,4 +3,6 @@ class Micropost < ActiveRecord::Base
     attr_accessible :name, :content
 
     belongs_to :user
+
+    validates :content, :presence => true
 end

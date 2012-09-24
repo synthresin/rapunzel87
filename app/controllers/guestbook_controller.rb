@@ -1,13 +1,7 @@
 class GuestbookController < ApplicationController
 	def index
-		
-		if signed_in?
-			@micropost = current_user.microposts.build
-		else
-			@micropost = Micropost.new
-		end
+		@micropost = Micropost.new
 
-		@microposts = Micropost.all
-
+		@microposts = Micropost.order("created_at DESC").all
 	end
 end
