@@ -2,7 +2,7 @@
 <!-- 로그인 안했을때-->
 <% if signed_in? %>
 <div class="field">
-	<%= current_user.name %>
+	<%= current_user.nickname %>
 </div>
 <% else %>
 <div class="field">
@@ -26,12 +26,12 @@
 		<% if p.user_id.nil? %>
 		<td><%= p.name %></td>	
 		<% else %>
-		<td><%= User.find(p.user_id).name %></td>	
+		<td><%= User.find(p.user_id).nickname %></td>	
 		<% end %>
 		<td><%= p.content %></td>
 		<td>
 			<% if current_user.admin? || p.user_id = current_user.id %>
-				<%= link_to '삭제' %>
+				<%= link_to '삭제' ,micropost_path(p), :method => :delete, :confirm => "정말로 삭제하시겠습니까?" %>
 			<% end %>
 		</td>
 	</tr>

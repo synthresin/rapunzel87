@@ -6,11 +6,15 @@ class MicropostsController < ApplicationController
 		else
 		Micropost.create(params[:micropost])
 		end
-		@micropost = Micropost.new
 		
 		redirect_to guestbook_path
 	end
 
 	def destroy
+
+		Micropost.find(params[:id]).destroy
+
+		redirect_to guestbook_path
+		
 	end
 end
