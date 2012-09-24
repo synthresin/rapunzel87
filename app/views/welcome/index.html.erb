@@ -20,9 +20,13 @@
 (그 이전의 그 이후의)<br/>
 첫화면 음악 지정 가능<br/>
 </small>
+<h4>메뉴</h4>
+<ul>
+	<li><%= link_to 'Guestbook', guestbook_path %></li>
+</ul>
+<h4>그외</h4>
 <% if signed_in? %>
 <%= link_to '로그아웃', logout_path %>
 <% else %>
 <%= link_to '로그인 페이지' ,login_path %>
 <% end %>
-<%= link_to '실제 페이지로' ,'#'%>
