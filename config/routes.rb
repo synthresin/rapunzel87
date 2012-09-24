@@ -5,6 +5,8 @@ Rapunzel87::Application.routes.draw do
   match '/login' => 'sessions#new'
   match '/logout' => 'sessions#destroy'
 
+  match '/guestbook' => 'guestbook#index'
+
   root :to => 'welcome#index'
 
   # The priority is based upon order of creation:
