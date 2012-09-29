@@ -30,7 +30,7 @@
 		<% end %>
 		<td><%= p.content %></td>
 		<td>
-			<% if current_user.admin? || p.user_id = current_user.id %>
+			<% if signed_in? && (current_user.admin? || p.user_id = current_user.id) %>
 				<%= link_to '삭제' ,micropost_path(p), :method => :delete, :confirm => "정말로 삭제하시겠습니까?" %>
 			<% end %>
 		</td>
