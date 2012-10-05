@@ -1,0 +1,122 @@
+<script type="text/x-handlebars" data-template-name="application">
+	<header>
+		<nav>
+			<ul>
+				<li><a {{action toDiary href=true}}>Diary</a></li>
+				<li><a {{action toGuestbook href=true}}>Guestbook</a></li>
+				<li><a {{action toPhoto href=true}}>Photo</a></li>
+				<li><a {{action toMusic href=true}}>Music</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="content">
+	어플리케이션이당!
+	{{outlet}}
+	</div>
+</script>
+<script type="text/x-handlebars" data-template-name="index">
+인덱스영역
+</script>
+<script type="text/x-handlebars" data-template-name="diary">
+다이어리영역
+</script>
+<script type="text/x-handlebars" data-template-name="music">
+뮤직영역
+</script>
+<script type="text/x-handlebars" data-template-name="photo">
+사진영역
+</script>
+<script type="text/x-handlebars" data-template-name="guestbook">
+게스트북영역
+</script>
+
+<script type="text/javascript">
+	
+Rapunzel87 = Ember.Application.create();
+
+Rapunzel87.Router = Em.Router.extend({
+	enableLogging: true,
+
+	root: Em.Route.extend({
+		//status change method
+		toDiary: Ember.Route.transitionTo('diary'),
+		toGuestbook: Ember.Route.transitionTo('guestbook'),
+		toPhoto: Ember.Route.transitionTo('photo'),
+		toMusic: Ember.Route.transitionTo('music'),
+
+		index: Em.Route.extend({
+			route: '/',
+			connectOutlets: function(router) {
+				console.log('Entering index...');
+				router.get('applicationController').connectOutlet('index');
+			}
+		}),
+		diary: Em.Route.extend({
+			route: '/diary',
+			connectOutlets: function(router) {
+				console.log('Entering diary...');
+				router.get('applicationController').connectOutlet('diary');
+			}
+		}),
+		guestbook: Em.Route.extend({
+			route: '/guestbook',
+			connectOutlets: function(router) {
+				console.log('Entering guestbook...');
+				router.get('applicationController').connectOutlet('guestbook');
+			}
+		}),
+		photo: Em.Route.extend({
+			route: '/photo',
+			connectOutlets: function(router) {
+				console.log('Entering photo...');
+				router.get('applicationController').connectOutlet('photo');
+			}
+		}),
+		music: Em.Route.extend({
+			route: '/music',
+			connectOutlets: function(router) {
+				console.log('Entering music...');
+				router.get('applicationController').connectOutlet('music');
+			}
+		}),
+	})
+});
+
+Rapunzel87.ApplicationView = Em.View.extend({
+	templateName: 'application'
+});
+
+Rapunzel87.ApplicationController = Em.Controller.extend();
+
+Rapunzel87.IndexController = Em.Controller.extend();
+
+Rapunzel87.IndexView = Em.View.extend({
+	templateName: 'index'
+});
+
+Rapunzel87.DiaryController = Em.Controller.extend();
+
+Rapunzel87.DiaryView = Em.View.extend({
+	templateName: 'diary'
+});
+
+Rapunzel87.MusicController = Em.Controller.extend();
+
+Rapunzel87.MusicView = Em.View.extend({
+	templateName: 'music'
+});
+
+Rapunzel87.PhotoController = Em.Controller.extend();
+
+Rapunzel87.PhotoView = Em.View.extend({
+	templateName: 'photo'
+});
+
+Rapunzel87.GuestbookController = Em.Controller.extend();
+
+Rapunzel87.GuestbookView = Em.View.extend({
+	templateName: 'guestbook'
+});
+
+Rapunzel87.initialize();
+</script>
