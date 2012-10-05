@@ -1,14 +1,14 @@
-#= require_self
-#= require_tree ./models
-#= require_tree ./controllers
-#= require_tree ./views
-#= require_tree ./helpers
-#= require_tree ./templates
+
 
 Rapunzel87 = Ember.Application.create();
 
 Rapunzel87.Router = Em.Router.extend({
+	enableLogging: true,
+
 	root: Em.Route.extend({
+		//status change method
+		showDiary: Ember.Route.transitionTo('diary'),
+
 		index: Em.Route.extend({
 			route: '/',
 			connectOutlets: function(router) {
@@ -16,7 +16,10 @@ Rapunzel87.Router = Em.Router.extend({
 			}
 		}),
 		diary: Em.Route.extend({
-			route: 'diary'
+			route: 'diary',
+			connectOutlets: function(router) {
+				console.log('다이어리 들감');
+			}
 		}),
 		guestbook: Em.Route.extend({
 			route: 'guestbook'
@@ -29,3 +32,5 @@ Rapunzel87.Router = Em.Router.extend({
 		}),
 	})
 });
+
+Rapunzel87.initialize();
