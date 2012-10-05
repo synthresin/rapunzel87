@@ -1,0 +1,1 @@
+Rapunzel87.PhotoController = Em.Controller.extend();

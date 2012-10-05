@@ -1,0 +1,1 @@
+Rapunzel87.GuestbookController = Em.Controller.extend();

@@ -1,0 +1,1 @@
+Rapunzel87.MusicController = Em.Controller.extend();

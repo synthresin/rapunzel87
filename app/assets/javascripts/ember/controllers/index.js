@@ -1,0 +1,1 @@
+Rapunzel87.IndexController = Em.Controller.extend();
