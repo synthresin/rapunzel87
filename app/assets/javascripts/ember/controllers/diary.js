@@ -1,0 +1,1 @@
+Rapunzel87.DiaryController = Em.Controller.extend();

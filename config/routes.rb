@@ -9,7 +9,7 @@ Rapunzel87::Application.routes.draw do
   match '/guestbook' => 'guestbook#index'
 
 
-  root :to => 'welcome#index'
+  root :to => 'app#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

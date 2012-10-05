@@ -12,6 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ember
+//= require ./vendor/handlebars
+//= require ./vendor/ember
+//= require ./vendor/ember-rest
 //= require ember/rapunzel87
-//= require_tree .
+//= require_tree ./ember/models
+//= require_tree ./ember/controllers
+//= require_tree ./ember/views
+//= require_tree ./ember/helpers
+//= require_tree ./ember/templates
