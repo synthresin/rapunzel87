@@ -1,3 +1,3 @@
 Rapunzel87.DiaryView = Em.View.extend({
-	templateName: 'wow'
+	templateName: 'ember/templates/diary'
 });
