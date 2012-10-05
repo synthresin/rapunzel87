@@ -7,7 +7,7 @@ Rapunzel87.Router = Em.Router.extend({
 
 	root: Em.Route.extend({
 		//status change method
-		toDiary: Ember.Route.transitionTo('diary'),
+		showDiary: Ember.Route.transitionTo('diary'),
 
 		index: Em.Route.extend({
 			route: '/',
@@ -33,5 +33,4 @@ Rapunzel87.Router = Em.Router.extend({
 	})
 });
 
-
-// Rapunzel87.initialize();
+Rapunzel87.initialize();
