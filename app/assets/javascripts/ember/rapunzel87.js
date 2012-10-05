@@ -12,13 +12,13 @@ Rapunzel87.Router = Em.Router.extend({
 		index: Em.Route.extend({
 			route: '/',
 			connectOutlets: function(router) {
-				console.log('인덱스 들감');
+				console.log('Entering index...');
 			}
 		}),
 		diary: Em.Route.extend({
 			route: 'diary',
 			connectOutlets: function(router) {
-				console.log('다이어리 들감');
+				console.log('Entering diary...');
 			}
 		}),
 		guestbook: Em.Route.extend({
