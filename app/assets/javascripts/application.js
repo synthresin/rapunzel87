@@ -20,4 +20,4 @@
 //= require_tree ./ember/controllers
 // require_tree ./ember/views
 // require_tree ./ember/helpers
-// require_tree ./ember/templates
+//= require_tree ./ember/templates

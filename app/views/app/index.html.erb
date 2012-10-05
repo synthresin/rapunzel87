@@ -1,61 +1,29 @@
-<script type="text/x-handlebars" data-template-name="application">
-	<header>
-		<nav>
-			<ul>
-				<li><a {{action toDiary href=true}}>Diary</a></li>
-				<li><a {{action toGuestbook href=true}}>Guestbook</a></li>
-				<li><a {{action toPhoto href=true}}>Photo</a></li>
-				<li><a {{action toMusic href=true}}>Music</a></li>
-			</ul>
-		</nav>
-	</header>
-	<div class="content">
-	어플리케이션이당!
-	{{outlet}}
-	</div>
-</script>
-<script type="text/x-handlebars" data-template-name="index">
-인덱스영역
-</script>
-<script type="text/x-handlebars" data-template-name="diary">
-다이어리영역
-</script>
-<script type="text/x-handlebars" data-template-name="music">
-뮤직영역
-</script>
-<script type="text/x-handlebars" data-template-name="photo">
-사진영역
-</script>
-<script type="text/x-handlebars" data-template-name="guestbook">
-게스트북영역
-</script>
-
 <script type="text/javascript">
 	
 
 
 Rapunzel87.ApplicationView = Em.View.extend({
-	templateName: 'application'
+	templateName: 'ember/templates/application'
 });
 
 Rapunzel87.IndexView = Em.View.extend({
-	templateName: 'index'
+	templateName: 'ember/templates/index'
 });
 
 Rapunzel87.DiaryView = Em.View.extend({
-	templateName: 'diary'
+	templateName: 'ember/templates/diary'
 });
 
 Rapunzel87.MusicView = Em.View.extend({
-	templateName: 'music'
+	templateName: 'ember/templates/music'
 });
 
 Rapunzel87.PhotoView = Em.View.extend({
-	templateName: 'photo'
+	templateName: 'ember/templates/photo'
 });
 
 Rapunzel87.GuestbookView = Em.View.extend({
-	templateName: 'guestbook'
+	templateName: 'ember/templates/guestbook'
 });
 
 Rapunzel87.initialize();
