@@ -20,9 +20,9 @@ class User < ActiveRecord::Base
   validates :password_confirmation, :presence => true,
                                     :on => :create
 
-  validates :email, :format => { :with => email_regex, :message => '잘못된 이메일 형식입니다.' }, 
-  			:presence => {:message => '이메일 주소를 입력해주세요.'}, 
-  			:uniqueness => true
+  validates :email,  :format => { :with => email_regex, :message => '잘못된 이메일 형식입니다.' }, 
+  			             :presence => {:message => '이메일 주소를 입력해주세요.'}, 
+  			             :uniqueness => true
   
   # end
   def admin?
